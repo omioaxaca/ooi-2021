@@ -30,7 +30,27 @@ http://www.ommenlinea.org/wp-content/uploads/practica/folletos/Introductorio_34.
 
 
 ## Parte 2: Introducción a C++
-Lista de temas
+
+Notas previas:
+
+- Los temas propuestos aquí son los mínimos requeridos para el resto de la olimpiada. No existe una bibliografía específica. El material sugerido corresponde a los videos del canal Programación ATS, los cuales han sido revisados por el comité y se ha acordado utilizarlos para reforzar los temas.
+- Se pretende que los ejercicios utilizados se enfoquen a la resolución de problemas lógicos.
+- Se recomienda leer la guía de [convención de estilos](./ConvencionEstilos.md) antes de abordar el temario.
+- Usar Omegaup para evaluar todos los ejercicios. Más información acerca de las ventajas aquí https://omegaup.com/course/Curso-OMI/assignment/COMI-intro/#problems/COMI-Objetivo 
+
+### Temas
+| Tema | Material | Notas |
+|-------|--------|---------|
+| Introducción a plataforma Omegaup| https://omegaup.com/course/Curso-OMI/assignment/COMI-intro/#problems | Usar Omegaup como plataforma oficial para evaluar los ejercicios |
+| Estructura básica de un programa | https://www.youtube.com/watch?v=ld4nzao5XAc ||
+| Tipos de datos y variables | https://www.youtube.com/watch?v=xBOpQN8jR54 ||
+| Entrada y salida de datos | https://www.youtube.com/watch?v=1iQUZEklWio | Hacer enfasis en que para la OOI no se requiere pedir los datos al usuario explicitamente, es decir no usar `cout << "Inserte un numero"`|
+| Operadores arimeticos | https://www.youtube.com/watch?v=rpZVq8LRb0U | |
+| Operadores lógicos | https://www.youtube.com/watch?v=75c1_7eHdlY | |
+| Operadores de igualdad y relacionales | https://www.youtube.com/watch?v=thoXz7vYE4k | |
+| Prioridad de operadores | https://www.youtube.com/watch?v=s7OZpNf49qE | |
+| Estructuras de selección | https://youtu.be/r5GbMsB0eOA https://youtu.be/V_fdETm_QMI | Usar la sentencia  `if`. El `switch` no es relevante en este punto. | 
+| Estructuras de repetición | https://www.youtube.com/watch?v=DTmMjJ-cd00 https://www.youtube.com/watch?v=vHKWMR2WaIQ https://www.youtube.com/watch?v=_6AdtcVn4xs https://youtu.be/yNWuEDd8iQs | Uso de `while`,`do-while` y `for` |
 
 ## Parte 3: Algoritmos y solución de problemas con programación
 Lista de temas
