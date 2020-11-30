@@ -54,3 +54,127 @@ Notas previas:
 
 ## Parte 3: Algoritmos y solución de problemas con programación
 Lista de temas
+- Recursión
+    Funciones matemáticas recursivas
+
+    Recursión para problemas no matemáticos (ventanas, calificaciones recursivas)
+
+    Recursión con memorización
+
+- Complejidad de un  algoritmo
+
+    Notación O(n)
+
+- Aritmética modular
+
+    Exponenciación rápida
+
+    Elevar a a la n molulo m
+
+- Búsqueda binaria
+
+    Recursiva
+
+    Iterativa
+
+    Lower bound y upper bound
+
+- Creación de nuevos tipos de datos usando struct
+
+- Pilas
+
+    Concepto básico
+
+    Implementación manual
+
+    std::stack
+
+    Problema de los paréntesis balanceados
+
+    Histograma
+
+- Búsqueda en profundidad (DFS)
+
+    Representación gráfica con árbol de decisiones
+
+    Todas las sumas posibles en un arreglo
+
+    DFS en dos dimensiones
+
+- Backtracking
+
+    Problema de las 8 reinas
+
+- Colas
+
+    Concepto básico
+
+    Implementación manual
+
+    std::queue
+
+- Búsqueda en amplitud (BFS)
+
+    Representación gráfica con árbol de decisiones
+
+    BFS en dos dimensiones
+
+- BFS y colas de prioridad
+
+- Mapas std::map
+
+- Barridos
+
+    Uso de cubetas (problema xor, sumas de parejas = k)
+
+- Árboles
+
+- Grafos
+
+- Problemas interactivos
+
+- Problemas de solo salida
+
+- Programación dinámica
+
+- Listas ligadas
+
+- Sets
+
+- Two pointers
+
+- Matemáticas y lógica (IMPORTANTE)
+
+    Exámenes pasados de la OMI
+
+    Optimización de problemas usando matemáticas
+
+    Factorización prima
+
+    Módulos
+
+    Precálculo
+
+    Combinatoria (principio del conteo, casillas)
+
+- Manipulación de strings y caracteres
+
+    Palindromos
+
+    subcadenas
+
+    prefijos y sufijos
+
+- Misceláneos
+
+    Buenas prácticas de programación
+
+    Paso de parámetros por referencia
+
+    Librería bits/stdc++
+
+    Optimizar entrada y salida con cin y cout
+
+    Leer de archivos
+
+    Uso de C++11
