@@ -3,14 +3,26 @@
 - Fases:
     - Curso introductorio: Curso de lógica, algoritmos simples y pseudocodigo.
         - Tareas semanales.
+        - Duracion: 4 semanas
+        - Fecha inicio: 11 de enero de 2021.
+        - Fecha fin: 5 de febrero de 2021.
     - Curso de C++: Curso del lenguaje de C++.
         - Desde 0 hasta condicionales y ciclos.
         - Tareas semanales.
+        - Duracion: 4 semanas
+        - Fecha inicio: 8 de febrero de 2021.
+        - Fecha fin: 5 de marzo de 2021.
     - Resolución de problemas básicos de programación competitiva usando C++.
         - Muchos problemas sencillos para que se domine el lenguaje.
         - Examen eliminatorio.
+        - Duracion: 2 semanas.
+        - Fecha inicio: 8 de marzo de 2021.
+        - Fecha fin: 19 de marzo de 2021.
     - Curso nivel intermedio de estructuras de datos y algoritmos.
         - Estructuras de datos simples, arreglos, matrices, pilas y colas.
         - Recursión.
         - Algoritmos que involucren estos (busqueda binaria)
+        - Duracion: 4 semanas.
+        - Fecha inicio: 22 de marzo de 2021.
+        - Fecha fin: 16 de abril de 2021.
     - Curso avanzado de algoritmos y estructuras de datos avanzadas.
