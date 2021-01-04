@@ -54,70 +54,83 @@ Notas previas:
 
 ## Parte 3: Algoritmos y solución de problemas con programación
 Lista de temas
+- Estructuras de datos simples
+    - Arreglos de 1 dimensión utilizado `std::vector`.
+    - Manipulacion de indices (indexar, arrego circular)
+- Manipulación de caracteres.
+    - `std::string`
+    - Codigo ASCII y conversion entre tipos de dato `char` e `int`.
+- Funciones
+    - Ventajas de las funciones
+    - Funciones que reciben parametros por valor
+- Arreglos de 2 dimensiones (Matrices)
+    - Representacion usando `std::vector` y forma primitiva
+    - Acceder a las posiciones fila y columna, utilizando modulos
+    - Suma de matrices
 - Recursión
-    Funciones matemáticas recursivas
+    - Funciones matemáticas recursivas
 
-    Recursión para problemas no matemáticos (ventanas, calificaciones recursivas)
+    - Recursión para problemas no matemáticos (ventanas, calificaciones recursivas)
 
-    Recursión con memorización
+    - Recursión con memorización
 
 - Complejidad de un  algoritmo
 
-    Notación O(n)
+    - Notación O(n)
 
 - Aritmética modular
 
-    Exponenciación rápida
+    - Exponenciación rápida
 
-    Elevar a a la n molulo m
+    - Elevar `a` a la `n` molulo `m`
 
 - Búsqueda binaria
 
-    Recursiva
+    - Recursiva
 
-    Iterativa
+    - Iterativa
 
-    Lower bound y upper bound
+    - Lower bound y upper bound
 
 - Creación de nuevos tipos de datos usando struct
 
 - Pilas
 
-    Concepto básico
+    - Concepto básico
 
-    Implementación manual
+    - Implementación manual
 
-    std::stack
+    - std::stack
 
-    Problema de los paréntesis balanceados
+    - Problema de los paréntesis balanceados
 
-    Histograma
+    - Histograma
 
 - Búsqueda en profundidad (DFS)
 
-    Representación gráfica con árbol de decisiones
+    - Representación gráfica con árbol de decisiones
 
-    Todas las sumas posibles en un arreglo
+    - Todas las sumas posibles en un arreglo
 
-    DFS en dos dimensiones
+    - DFS en dos dimensiones
 
 - Backtracking
 
-    Problema de las 8 reinas
+    - Problema de las 8 reinas
 
 - Colas
 
-    Concepto básico
+    - Concepto básico
 
-    Implementación manual
+    - Implementación manual
 
-    std::queue
+    - std::queue
 
 - Búsqueda en amplitud (BFS)
 
-    Representación gráfica con árbol de decisiones
+    - Representación gráfica con árbol de decisiones
 
-    BFS en dos dimensiones
+    - BFS en dos dimensiones
 
 - BFS y colas de prioridad
 
@@ -125,7 +138,7 @@ Lista de temas
 
 - Barridos
 
-    Uso de cubetas (problema xor, sumas de parejas = k)
+    - Uso de cubetas (problema xor, sumas de parejas = k)
 
 - Árboles
 
@@ -145,36 +158,36 @@ Lista de temas
 
 - Matemáticas y lógica (IMPORTANTE)
 
-    Exámenes pasados de la OMI
+    - Exámenes pasados de la OMI
 
-    Optimización de problemas usando matemáticas
+    - Optimización de problemas usando matemáticas
 
-    Factorización prima
+    - Factorización prima
 
-    Módulos
+    - Módulos
 
-    Precálculo
+    - Precálculo
 
-    Combinatoria (principio del conteo, casillas)
+    - Combinatoria (principio del conteo, casillas)
 
 - Manipulación de strings y caracteres
 
-    Palindromos
+    - Palindromos
 
-    subcadenas
+    - Subcadenas
 
-    prefijos y sufijos
+    - Prefijos y sufijos
 
 - Misceláneos
 
-    Buenas prácticas de programación
+    - Buenas prácticas de programación
 
-    Paso de parámetros por referencia
+    - Paso de parámetros por referencia
 
-    Librería bits/stdc++
+    - Librería bits/stdc++
 
-    Optimizar entrada y salida con cin y cout
+    - Optimizar entrada y salida con cin y cout
 
-    Leer de archivos
+    - Leer de archivos
 
-    Uso de C++11
+    - Uso de C++11
