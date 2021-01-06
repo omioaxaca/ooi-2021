@@ -57,6 +57,7 @@ Lista de temas
 - Estructuras de datos simples
     - Arreglos de 1 dimensión utilizado `std::vector`.
     - Manipulacion de indices (indexar, arrego circular)
+    - Ordenamiento. `std::sort`.
 - Manipulación de caracteres.
     - `std::string`
     - Codigo ASCII y conversion entre tipos de dato `char` e `int`.
