@@ -18,11 +18,14 @@
         - Duracion: 2 semanas.
         - Fecha inicio: 8 de marzo de 2021.
         - Fecha fin: 19 de marzo de 2021.
-    - Curso nivel intermedio de estructuras de datos y algoritmos.
-        - Estructuras de datos simples, arreglos, matrices, pilas y colas.
-        - Recursión.
-        - Algoritmos que involucren estos (busqueda binaria)
+    - Curso de estructuras de datos y algoritmos. Nivel básico.
+        - Temas:
+            - Estructuras de datos simples
+            - Manipulación de caracteres.
+            - Funciones
+            - Arreglos de 2 dimensiones (Matrices)
+        - Examen eliminatorio.
         - Duracion: 4 semanas.
         - Fecha inicio: 22 de marzo de 2021.
         - Fecha fin: 16 de abril de 2021.
-    - Curso avanzado de algoritmos y estructuras de datos avanzadas.
+    -  Curso de estructuras de datos y algoritmos. Nivel intermedio.
