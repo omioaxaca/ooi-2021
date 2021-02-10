@@ -82,6 +82,11 @@ El presente documento enuncia algunas de la convenciones utilizadas para los có
 - Preferir comentarios in-line `//`
 
 ## Arreglos de C vs arreglos de C++
+- Preferir la libreria `std::vector` antes que arreglos de C, debido a la flexibilidad que brinda la STL. Por ejemplo, con el vector es posible inicializar todos los elementos a un valor definido, así como reservar solo la memoria necesaria. Adicionalmente, brinda otras ventajas como hacer más fácil el ordenamiento, comparación entre vectores, invertir los datos
+```c++
+cin >> numDatos;
+vector<int> datos(numDatos, 0); // Reserva numDatos y los inicializa en 0.
+```
 
 ## Miscelaneos
 - Preferir _foreach_ vs iteradores para recorrer `list`, `map`, `set`.
