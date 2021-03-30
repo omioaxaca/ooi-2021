@@ -1,2 +1,6 @@
-a.out
+# Linux execs
+*.out
+# windows execs
 *.exe
+# Personal editors configs
+*.vscode
