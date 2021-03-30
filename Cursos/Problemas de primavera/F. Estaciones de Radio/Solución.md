@@ -2,9 +2,11 @@
 
 **Descripción**: https://omegaup.com/arena/problem/estacion
 
-En encontrar la estación de radio más cercana de las 5 estaciones que nos proporcionan dado una frecuencia inicial en particular.
+El problema consiste en dada una frecuencia inicial en particular, debemos encontrar la estación de
+radio más cercana de las 5 estaciones que nos proporcionan.
 
-Si la frecuencia inicial no está dentro del rango imprimimos la palabra "error", si no, imprimimos la distancia la frencuencia más cercana y si está adelante o detrás.
+Si la frecuencia inicial no está dentro del rango imprimimos la palabra "error",
+si no, imprimimos la distancia la frencuencia más cercana y si está adelante o detrás.
 
 Nota: Si hay dos estaciones a la misma distancia debemos tomar la más a la derecha.
 
@@ -12,8 +14,9 @@ Nota: Si hay dos estaciones a la misma distancia debemos tomar la más a la dere
 ## Solución
 
 - Para solucionar el problema basta con calcular la distancia a cada estación y quedarnos con la que más pequeña.
-- Para quedarnos con la más a la derecha en caso de que haya distancias iguales basta con recorren las estaciones en orden ascendente y usar $<=$ a nuestra comparación.
+- En caso de que haya distancias iguales, para quedarnos con la más a la derecha basta con recorrer las estaciones en orden ascendente y usar $<=$ a nuestra comparación.
 - Usamos el signo de la distancia para saber si está a la derecha o izquierda
+- Nota que para conservar el signo de la distancia todo el tiempo usamos la función $abs$ para obtener el valor absoluto al momento de hacer nuestra comparaciones.
 
 ## Código
 
@@ -83,4 +86,3 @@ int main() {
 }
 
 ```
-

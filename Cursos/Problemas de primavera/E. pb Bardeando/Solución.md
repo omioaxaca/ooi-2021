@@ -10,7 +10,7 @@ Nos dan $n$ trozos y cada trozo tiene cierta longitud.
 ## Solución
 
 - Debemos sumar la cantidad de perímetro que podemos cubrir, para ello usamos un ciclo.
-- Calculamos la diferencia $Perimetro - suma$. Si la diferencia es negativa tenemos de sobra.
+- Calculamos la diferencia $Perimetro - suma$. Si la diferencia es negativa tenemos longitud de trozos de sobra.
 
 ## Código
 
