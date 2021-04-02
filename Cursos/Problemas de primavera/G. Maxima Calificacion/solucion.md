@@ -1,4 +1,4 @@
-# Problema F Estaciones de Radio
+# Problema Maxima Calificación
 
 **Descripción**: https://omegaup.com/arena/problem/Maxima-calificacion/
 

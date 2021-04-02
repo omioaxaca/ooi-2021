@@ -1,4 +1,4 @@
-# Problema F Estaciones de Radio
+# Problema Numeros NO Fibonacci
 
 **Descripción**: https://omegaup.com/arena/problem/nofib/#problems
 
