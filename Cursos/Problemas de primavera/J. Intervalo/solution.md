@@ -6,10 +6,15 @@ En este problema nos van a dar 3 numeros (A,B,C) y tenemos que determinar si C e
 
 ## Solución
 
-Podemos imaginarnos los 3 numeros como posiciones en una linea recta, e imaginar que las posiciones A y B dictan el inicio y fin de un rango que es donde debemos comprobar si se encuentra C. 
-Al problema solo le interesan 3 posibilidades, si C se encuentra adentro, hacia la izquierda o la derecha del intervalo dictado por A-B.
+Podemos imaginarnos los 3 numeros como posiciones en una linea recta, e imaginar que las posiciones A y B dictan el inicio y fin de un rango que es donde debemos comprobar si se encuentra C. Al problema solo le interesan 3 posibilidades, si C se encuentra adentro, hacia la izquierda o la derecha del intervalo dictado por A-B.
+
+**Adentro del intervalo**:
 Por lo que para saber si C se encuentra entre A y B, tenemos que saber si C es mayor o igual que A y menor o igual que B al mismo tiempo.
+
+**Izquierda**:
 Para saber si se encuentra hacia la izquierda, nos basta con saber si C es menor que A. Ya que si C es menor que A tambien es menor que B, por lo tanto C es menor que ambos y esta a la izquierda en nuestra linea recta.
+
+**Derecha**:
 Para saber si se encuentra hacia la derecha, podemos comparar si C es mayor que B. Ya que si C es mayor que B tambien es mayor que A, por lo tanto C es mayor que ambos y esta a la derecha en nuestra linea recta.
 
 ## Código
