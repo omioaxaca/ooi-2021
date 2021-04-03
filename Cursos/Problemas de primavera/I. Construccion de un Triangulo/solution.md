@@ -11,7 +11,7 @@ Observar que nos dan en la entrada numeros decimales, por lo que pueden ser ente
 
 Si hacemos varios ejemplos nos damos cuenta que en efecto hay longitudes con las que no podemos construir un triangulo. Necesitamos de una herramienta que nos ayude a comprobar si se puede construir dicho triangulo, y para ello utilizamos el teorema de la desigualdad triangular.
 
-![alt text](/teorema.png "Teorema")
+![alt text](https://github.com/omioaxaca/ooi-2021/blob/master/Cursos/Problemas%20de%20primavera/I.%20Construccion%20de%20un%20Triangulo/teorema.png "Teorema")
 
 El teorema de la desigualdad triangular dice que: `En todo triángulo la suma de las longitudes de dos lados cualquiera es siempre mayor a la longitud del lado restante`. Este hecho es una consecuencia de otro teorema de la geometría plana clásica que afirma que la distancia más corta entre dos puntos es la línea recta.
 
