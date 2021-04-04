@@ -12,3 +12,6 @@ Destreza y pensamiento logico
 Uso de cubeta
 - Missing number https://cses.fi/problemset/task/1083
     - Tambien se puede resolver con XOR o suma de Gauss
+
+## Programacion dinamica
+- https://cses.fi/problemset/task/1633 - Ejemplo de memorizacion de tipo top-down
