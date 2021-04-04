@@ -23,3 +23,19 @@ por lo que la hija pequeña solo pudo haber tomado la cantidad resultante al efe
 division entera de residuo  `(hijas - 1)`
 
 [Link al codigo](./C_Herencia.cpp)
+
+## Problema D - Ajedrez
+
+## Problema E - Bardeando
+
+**Descripción**: https://omegaup.com/arena/problem/pb-Bardeando/
+
+El problema consiste en calcular la cantidad faltante de longitud de trozos para cubrir cierto perímetro.
+
+Nos dan $n$ trozos y cada trozo tiene cierta longitud.
+
+
+**Solución**
+
+- Debemos sumar la cantidad de perímetro que podemos cubrir, para ello usamos un ciclo.
+- Calculamos la diferencia $Perimetro - suma$. Si la diferencia es negativa tenemos longitud de trozos de sobra.
