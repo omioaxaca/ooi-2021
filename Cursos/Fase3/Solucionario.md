@@ -213,3 +213,40 @@ Debemos imprimir la secuencia y el número de elementos formados.
 - Observa que usamos una variable auxiliar $tmp$ para no perder níngún elemento de la secuencia.
 
 [Link al código](./M.%20Si%20te%20da/main.cpp)
+
+## Problema O - Playeras de Navidad
+
+**Descripción**: https://omegaup.com/arena/problem/Playeras-de-Navidad/
+
+El problema en sí consiste en determinar el total que se pagó al comprar 4 grupos de playeras de tallas `CH`, `M`, `G` y `EG`. Cada talla con diferente precio
+
+**Solucion**
+El reto de este problema es leer la entrada, ya que se combinan enteros y caracteres.
+
+Se puede abordar de diferentes maneras, pero la mas simple es utilizar `cin`.
+
+```c++
+int cantidad;
+char talla;
+cin >> cantidad >> talla;
+```
+
+Nota que en el segmento de código de arriba, el `cin` se engará de leer correctamente un entero y guardarlo en la variable `cantidad`, mientras que el caracter será guardado en `talla`. Esto puede leer sin problemas valores del tipo `1000M`, `0G` y cualquier combinacion que tenga un entero seguido por **un solo caracter**.
+
+Para resolver el problema en el que hay dos caracteres, por ejempl para `CH`, simplemente usamos un `if` en `talla` para ver si es `C` o `E`, ya que en estos casos sabemos que el siguiente valor es un caracter, el cual podemos simplemente leer y guardar en una variable extra.
+
+Ahora el codigo se veria asi:
+```c++
+int cantidad;
+char talla;
+char basura;
+cin >> cantidad >> talla;
+if(talla == 'C' || talla == 'E') {
+   cin >> basura; // Leer el caracter adicional
+}
+```
+Para hacer la suma del total, simplemente usamos un `switch` o `if` para determinar el precio de acuerdo a la talla y multiplicar por la cantidad.
+
+Nota adicional: Recuerda que el orden en que se da la entrada es distinto, es decir podria ser `5CH 2M 3G 4EG` pero tambien `2M 3G 5CH 4EG`.
+
+[Link al código](./O.%20Playeras%20de%20Navidad/playeras_navidad.cpp)
