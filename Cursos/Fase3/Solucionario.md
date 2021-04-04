@@ -214,6 +214,96 @@ Debemos imprimir la secuencia y el número de elementos formados.
 
 [Link al código](./M.%20Si%20te%20da/main.cpp)
 
+## Problema N - Cubote
+
+**Descripcion**
+
+El problema nos dice que nos daran `N` * `N` * `N` cubos, es decir si `N` = 5, tendriamos `5`*`5`*`5`= `125` cubos.
+Utilizando esta cantidad de cubos, se deben acomodar en una mesa de tal forma que se forme un cubo mas grande (cubote). Imagina que son bloques lego, y se quieren juntar para crear un cubo que tenga `N` bloques por lado.
+
+El reto es encontrar la forma de acomodarlos de tal manera que las caras visibles tengan los valores minimos.
+
+**Solucion**
+
+Uno de los primeros pasos es entender que es una _cara visible_ del cubo.
+
+Considera las siguientes imagenes. En la primera se presenta un cubo sobre una mesa azul.
+Como se observa, la cara inferior esta en contacto con la mesa, por lo tanto **NO es visible** desde ningun angulo. Cualquiera de las otras caras son visibles. La cara invisible esta sombreada en azul.
+
+En la segunda imagen, se han colocado 2 cubos, uno al lado del otro. En este caso, ambos cubos tienes 2 caras invisibles: una es la que esta en contacto con la mesa (sombra azul), mientras que la otra se oculta al colocar un cubo al lado del otro (sombra verde.)
+
+<img src="./N.%20Cubote/cubo_mesa.png" width="200">
+<img src="./N.%20Cubote/2cubo_mesa.png" width="200">
+
+Ahora bien, podemos asumir que si se pusiera un cubo encima de otro, se taparia tambien la cara superior del cubo de abajo. Observa la siguiente imagen, en la que se han colocado 2 cubos encima de otros 2. El area roja sorresponde a la nueva cara invisible.
+
+<img src="./N.%20Cubote/3cubo_mesa.png" width="200">
+
+Es importante notar que mientras mas cubos se coloquen al lado de otro, se incrementan las caras invisibles.
+
+Se deja como ejercicio al lector deducir las siguientes conjeturas:
+1. En el cubote, los cubos de las esquinas superiores tienen 3 caras visibles.
+2. En el cubote, los cubos de las aristas tienes 2 caras visibles.
+3. En el cubote, los cubos que no estan ni en las esquinas ni aristas solo tienen 1 cara visible.
+
+Con base en las conjeturas anteriores, se puede plantear una solucion al problema de la siguiente manera:
+
+Dados los valores de las caras, encontrar las combinaciones de caras con el minimo valor. Es decir calcular las siguientes variables:
+`minUnaCara`, `minDosCaras` y `minTresCaras`.
+Para hacerlo, es necesario considerar la posicion en la que se encuentran los valores. Por ejemplo, para `minDosCaras` NO es posible usar los valores de las caras `A` y `F` ya que no estan juntas.
+
+<img src="./N.%20Cubote/valores_cubo.png" width="200">
+
+Posteriormente, se deben calcular la cantidad de cubos que habra en las esquinas superiores y la cantidad total de aristas visibles:
+`cubosEnEsquinasSuperiores` y `cubosEnAristas`.
+
+Nota que `cubosEnEsquinasSuperiores` siempre sera `4` para todos los cubotes con `N > 1`.
+Observa la siguiente imagen, en donde la sombra roja representa los cubos en las esquinas superiores, mientras que la verde representa las aristas.
+
+<img src="./N.%20Cubote/cubote3.png" width="200">
+
+Para hacer el calculo de estas variables basta con hacer algunos casos a mano y encontrar un patron que relacione a la variable `N`.
+
+Tip: Nota que empezando por el nivel del cubote que toca la mesa, existen 4 cubos en las aristas y este patron se repite excepto en el nivel superior.
+
+La ultima variable que queda por calcular es `cubosConUnaCara`, la cual se refiere a aquellos cubos que no son ni aristas ni esquinas. Esta es simple:
+```c++
+cubosTotales = N * N * N;
+cubosConUnaCara = cubosTotales - (cubosEnEsquinasSuperiores + cubosEnAristas);
+```
+
+Finalmente, la suma total de las caras visibles seria:
+
+```c++
+int total = 0;
+total += minUnaCara * cubosConUnaCara;
+total += minDosCaras * cubosEnAristas;
+total += minTresCaras * cubosEnEsquinasSuperiores;
+```
+
+En el caso de ejemplo que se proporciona, se tendrían los siguientes valores:
+
+```
+minUnaCara = 1
+minDosCaras = 3
+minTresCaras = 6
+
+cubosConUnaCara = 0
+cubosEnAristas = 4
+cubosEnEsquinasSuperiores = 4
+```
+
+```c++
+int total = 0;
+total += minUnaCara * cubosConUnaCara;              // 1 * 0 = 0
+total += minDosCaras * cubosEnAristas;              // 3 * 4 = 12
+total += minTresCaras * cubosEnEsquinasSuperiores;  // 6 * 4 = 24
+cout << total // 36
+```
+
+
+NOTA: No se proporciona el código de solución a este problema, dado que se deja como ejercicion al lector.
+
 ## Problema O - Playeras de Navidad
 
 **Descripción**: https://omegaup.com/arena/problem/Playeras-de-Navidad/
