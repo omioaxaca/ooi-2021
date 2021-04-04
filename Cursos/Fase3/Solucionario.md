@@ -6,11 +6,14 @@
 
 ## Problema C - Herencia
 
-Enunciado clave: Si las monedas no pueden ser divididas en `N` partes idénticas, entonces
+**Descripción**
+Enunciado clave: 
+>Si las monedas no pueden ser divididas en `N` partes idénticas, entonces
 las partes fueron divididas en lo más cercano posible a que fueran idénticas: cada parte
 difiere de la otra por una moneda, a lo mucho. En ese caso, la hija indica que tomo una
 de las partes más pequeñas para ella.
 
+**Solución**
 La cantidad de monedas que sobra es la herencia que se repartira entre las hijas restantes,
 es decir: `herencia = residuo / (hijas - 1)`  <---- división entera.
 
@@ -22,7 +25,7 @@ sido un numero no divisible entre el total de hijas)
 por lo que la hija pequeña solo pudo haber tomado la cantidad resultante al efectuar la
 division entera de residuo  `(hijas - 1)`
 
-[Link al codigo](./C_Herencia.cpp)
+[Link al codigo](./C.%20Herencia/C_Herencia.cpp)
 
 ## Problema D - Ajedrez
 
@@ -32,10 +35,162 @@ division entera de residuo  `(hijas - 1)`
 
 El problema consiste en calcular la cantidad faltante de longitud de trozos para cubrir cierto perímetro.
 
-Nos dan $n$ trozos y cada trozo tiene cierta longitud.
+Nos dan `n` trozos y cada trozo tiene cierta longitud.
 
 
 **Solución**
 
 - Debemos sumar la cantidad de perímetro que podemos cubrir, para ello usamos un ciclo.
-- Calculamos la diferencia $Perimetro - suma$. Si la diferencia es negativa tenemos longitud de trozos de sobra.
+- Calculamos la diferencia `Perimetro - suma`. Si la diferencia es negativa tenemos longitud de trozos de sobra.
+
+[Link al código](./E.%20Bardeando/main.cpp)
+
+## Problema F - Estaciones de Radio
+
+**Descripción**: https://omegaup.com/arena/problem/estacion
+
+El problema consiste en dada una frecuencia inicial en particular, debemos encontrar la estación de
+radio más cercana de las 5 estaciones que nos proporcionan.
+
+Si la frecuencia inicial no está dentro del rango imprimimos la palabra "error",
+si no, imprimimos la distancia la frencuencia más cercana y si está adelante o detrás.
+
+Nota: Si hay dos estaciones a la misma distancia debemos tomar la más a la derecha.
+
+
+**Solución**
+
+- Para solucionar el problema basta con calcular la distancia a cada estación y quedarnos con la que más pequeña.
+- En caso de que haya distancias iguales, para quedarnos con la más a la derecha basta con recorrer las estaciones en orden ascendente y usar `<=` a nuestra comparación.
+- Usamos el signo de la distancia para saber si está a la derecha o izquierda
+- Nota que para conservar el signo de la distancia todo el tiempo usamos la función `abs` para obtener el valor absoluto al momento de hacer nuestra comparaciones.
+
+[Link al código](./F.%20Estaciones%20de%20Radio/main.cpp)
+
+## Problema G - Maxima Calificación
+
+**Descripción**: https://omegaup.com/arena/problem/Maxima-calificacion/
+
+El problema consiste en dado 3 numeros encontrar el mayor de los 3
+
+
+**Solución**
+
+La solución al problema es comparar los 3 numeros 
+`a` > `b` y `a` > `c`  => `a` es mayor 
+`b` > `a` y `b` > `c` => `b` es mayor
+si no `c` es mayor
+
+[Link al código](./G.%20Maxima%20Calificacion/main.cpp)
+
+## Problema H - Numeros NO Fibonacci
+
+**Descripción**: https://omegaup.com/arena/problem/nofib/#problems
+
+El problema consiste en dado un numero entero `a` escribir todos los numeros menores a `a` que no pertenecen a la susesion
+
+
+**Solución**
+
+- hay que primero encontrar los numeros que si pertenecen a la sucesion
+- debemos guardar el valor anterior de la suma así como el nuevo valor de la suma
+- usamos estos 2 valores como rango para  imprimir  los valores que no se encuentran en la sucesion simpre y cuando el valor sea menor al que nos indicaron 
+
+[Link al código](./H.%20Numeros%20NO%20Fibonacci/main.cpp)
+
+## Problema I - Construccion de un triangulo
+
+**Descripción**: https://omegaup.com/arena/problem/DRMIGTriangulo/
+
+El problema consiste en determinar si es posible o no, construir un triangulo dadas las longitudes de sus 3 lados. 
+Nos van a dar 3 enteros que son el tamaño de cada uno de los lados de nuestro supuesto triangulo que tenemos que validar si es posible o no crear.
+Tenemos que devolver SI o NO respectivamente si es posible crear dicho triangulo.
+Observar que nos dan en la entrada numeros decimales, por lo que pueden ser enteros o con punto flotante por lo que hay que asegurarnos que las variables que ocupemos puedan soportar numeros con punto decimal (float, double).
+
+**Solución**
+
+Si hacemos varios ejemplos nos damos cuenta que en efecto hay longitudes con las que no podemos construir un triangulo. Necesitamos de una herramienta que nos ayude a comprobar si se puede construir dicho triangulo, y para ello utilizamos el teorema de la desigualdad triangular.
+
+![Imagen de solucion](./I.%20Construccion%20de%20un%20Triangulo/teorema.png "Teorema")
+
+El teorema de la desigualdad triangular dice que: `En todo triángulo la suma de las longitudes de dos lados cualquiera es siempre mayor a la longitud del lado restante`. Este hecho es una consecuencia de otro teorema de la geometría plana clásica que afirma que la distancia más corta entre dos puntos es la línea recta.
+
+Tomando como base el teorema, sabemos que podemos construir un triangulo si las longitudes cumplen con dicho teorema, entonces tenemos que para todas las combinaciones posibles de pares de longitudes tenemos que aplicar dicho teorema.
+
+```c++
+x + y > z
+x + z > y
+y + z > x
+```
+
+Si todas estas afirmaciones son verdaderas, sabemos que con las longitudes que tenemos podemos construir un triangulo. Si cualquiera de ellas es falsa, ya no cumple con el teorema y entonces ya no podemos construir un triangulo.
+
+[Link al código](./I.%20Construccion%20de%20un%20Triangulo/main.cpp)
+
+## Problema J - Intervalo
+
+**Descripción**: https://omegaup.com/arena/problem/Intervalo/
+
+En este problema nos van a dar 3 numeros (A,B,C) y tenemos que determinar si C esta contenido en el rango entre A y B o si se encuentra fuera de ese rango en que posición se encuentra, si a la derecha o a la izquierda.
+
+**Solución**
+
+Podemos imaginarnos los 3 numeros como posiciones en una linea recta, e imaginar que las posiciones A y B dictan el inicio y fin de un rango que es donde debemos comprobar si se encuentra C. Al problema solo le interesan 3 posibilidades, si C se encuentra adentro, hacia la izquierda o la derecha del intervalo dictado por A-B.
+
+**Adentro del intervalo**:
+Por lo que para saber si C se encuentra entre A y B, tenemos que saber si C es mayor o igual que A y menor o igual que B al mismo tiempo.
+
+**Izquierda**:
+Para saber si se encuentra hacia la izquierda, nos basta con saber si C es menor que A. Ya que si C es menor que A tambien es menor que B, por lo tanto C es menor que ambos y esta a la izquierda en nuestra linea recta.
+
+**Derecha**:
+Para saber si se encuentra hacia la derecha, podemos comparar si C es mayor que B. Ya que si C es mayor que B tambien es mayor que A, por lo tanto C es mayor que ambos y esta a la derecha en nuestra linea recta.
+
+[Link al código](./J.%20Intervalo/main.cpp)
+
+## Problema K - Normal
+
+**Solución**
+
+Dada la descripción tenemos que simular una distribución normal con números enteros.
+Como entrada tenemos un número N que indica el máximo de la distribución. Tenemos que empezar desde
+1 hasta N y una vez llegado a N tenemos que ir de N a 1. De esa manera podemos imprimir en pantalla
+la distribución de 1 hasta N y de N hasta 1.
+
+[Link al código](./K.%20Normal/normal.cpp)
+
+# Problema L - El caracol
+
+**Descripción**
+
+Nos dicen que el caracol tiene que subir una cantidad P de metros para salir de un pozo.
+Todos los días logra subir S metros y cada noche resbala R metros. Por lo que tenemos que
+calcular en cuantos días podría salir del pozo.
+
+**Solución**
+
+Tenemos que hacer un ciclo en el que cada iteración corrresponde a un día y una noche.
+Continuaremos el ciclo mientras la cantidad de metros avanzada sea menor que la profundidad del pozo.
+Si el caracol no ha podido salir, tenemos que restar los metros que éste resbala cada noche.
+
+[Link al código](./L.%20El%20caracol/el_caracol.cpp)
+
+## Problema M - Si te da
+
+**Descripción**: https://omegaup.com/arena/problem/siteda
+
+El problema consiste en iterar sobre una secuencia cuyo siguiente elemente está formado por tomar la unidad del resultado de la suma de los dos anteriores.
+
+La secuencia termina cuando volvamos a los dos primeros números iniciales.
+
+Debemos imprimir la secuencia y el número de elementos formados.
+
+
+**Solución**
+
+- Para solucionar el problema podemos simular la secuencia.
+- Usaremos el operador de módulo para obtener el siguiente elemento.
+- Para imprimir la secuencia podemos hacerlo por partes, es decir, al  generar cada elemento de la secuencia.
+- Observa que usamos una variable auxiliar $tmp$ para no perder níngún elemento de la secuencia.
+
+[Link al código](./M.%20Si%20te%20da/main.cpp)
