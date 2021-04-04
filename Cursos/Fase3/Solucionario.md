@@ -27,7 +27,26 @@ division entera de residuo  `(hijas - 1)`
 
 [Link al codigo](./C.%20Herencia/C_Herencia.cpp)
 
-## Problema D - Ajedrez
+## Problema D - Tablero de ajedrez
+
+**Solución**
+Considera la siguiente imagen:
+
+<img src="./D.%20Ajedrez/ajedrez.png" width="300">
+
+Si enumeramos las columnas del 1 al 8, donde `'a'=1`, `'b'=2`... `'h'=8`, podemos notar la siguientes propiedades:
+- Cuando el indice de la columna es **impar**, entonces todos los indices de las filas **impares** corresponden a una casilla negra. Mientras que los indices de las filas **pares** son blancas. (Observa la columna marcada en rojo)
+- Cuando el indice de la columna es **par**, entonces todos los indices de las filas **impares** corresponden a una casilla blanca. Mientras que los indices de las filas **pares** son negras. (Observa la columna marcada en verde)
+
+Dicho de otra forma:
+- La casilla es negra si se cumple alguna de las siguientes condiciones:
+   - La columna es impar y la fila es impar.
+   - La columna es par y la fila es par.
+- La casilla es blanca si se cumple alguna de las siguiente condiciones:
+   - La columna es impar y la fila es par.
+   - La columna es par y la fila es impar.
+
+[Link al codigo](./D.%Ajedrez/ajedrez.cpp)
 
 ## Problema E - Bardeando
 
@@ -111,7 +130,7 @@ Observar que nos dan en la entrada numeros decimales, por lo que pueden ser ente
 
 Si hacemos varios ejemplos nos damos cuenta que en efecto hay longitudes con las que no podemos construir un triangulo. Necesitamos de una herramienta que nos ayude a comprobar si se puede construir dicho triangulo, y para ello utilizamos el teorema de la desigualdad triangular.
 
-![Imagen de solucion](./I.%20Construccion%20de%20un%20Triangulo/teorema.png "Teorema")
+<img src="./I.%20Construccion%20de%20un%20Triangulo/teorema.png" width="300">
 
 El teorema de la desigualdad triangular dice que: `En todo triángulo la suma de las longitudes de dos lados cualquiera es siempre mayor a la longitud del lado restante`. Este hecho es una consecuencia de otro teorema de la geometría plana clásica que afirma que la distancia más corta entre dos puntos es la línea recta.
 
