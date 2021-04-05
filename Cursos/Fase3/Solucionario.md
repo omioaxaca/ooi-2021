@@ -46,7 +46,7 @@ Dicho de otra forma:
    - La columna es impar y la fila es par.
    - La columna es par y la fila es impar.
 
-[Link al codigo](./D.%Ajedrez/ajedrez.cpp)
+[Link al codigo](./D.%20Ajedrez/ajedrez.cpp)
 
 ## Problema E - Bardeando
 
@@ -178,7 +178,7 @@ la distribución de 1 hasta N y de N hasta 1.
 
 [Link al código](./K.%20Normal/normal.cpp)
 
-# Problema L - El caracol
+## Problema L - El caracol
 
 **Descripción**
 
@@ -232,12 +232,12 @@ Como se observa, la cara inferior esta en contacto con la mesa, por lo tanto **N
 
 En la segunda imagen, se han colocado 2 cubos, uno al lado del otro. En este caso, ambos cubos tienes 2 caras invisibles: una es la que esta en contacto con la mesa (sombra azul), mientras que la otra se oculta al colocar un cubo al lado del otro (sombra verde.)
 
-<img src="./N.%20Cubote/cubo_mesa.png" width="200">
-<img src="./N.%20Cubote/2cubo_mesa.png" width="200">
+<img src="./N.%20Cubote/cubo_mesa.png" width="300">
+<img src="./N.%20Cubote/2cubo_mesa.png" width="300">
 
 Ahora bien, podemos asumir que si se pusiera un cubo encima de otro, se taparia tambien la cara superior del cubo de abajo. Observa la siguiente imagen, en la que se han colocado 2 cubos encima de otros 2. El area roja sorresponde a la nueva cara invisible.
 
-<img src="./N.%20Cubote/3cubo_mesa.png" width="200">
+<img src="./N.%20Cubote/3cubo_mesa.png" width="300">
 
 Es importante notar que mientras mas cubos se coloquen al lado de otro, se incrementan las caras invisibles.
 
@@ -252,7 +252,7 @@ Dados los valores de las caras, encontrar las combinaciones de caras con el mini
 `minUnaCara`, `minDosCaras` y `minTresCaras`.
 Para hacerlo, es necesario considerar la posicion en la que se encuentran los valores. Por ejemplo, para `minDosCaras` NO es posible usar los valores de las caras `A` y `F` ya que no estan juntas.
 
-<img src="./N.%20Cubote/valores_cubo.png" width="200">
+<img src="./N.%20Cubote/valores_cubo.png" width="300">
 
 Posteriormente, se deben calcular la cantidad de cubos que habra en las esquinas superiores y la cantidad total de aristas visibles:
 `cubosEnEsquinasSuperiores` y `cubosEnAristas`.
@@ -260,7 +260,7 @@ Posteriormente, se deben calcular la cantidad de cubos que habra en las esquinas
 Nota que `cubosEnEsquinasSuperiores` siempre sera `4` para todos los cubotes con `N > 1`.
 Observa la siguiente imagen, en donde la sombra roja representa los cubos en las esquinas superiores, mientras que la verde representa las aristas.
 
-<img src="./N.%20Cubote/cubote3.png" width="200">
+<img src="./N.%20Cubote/cubote3.png" width="300">
 
 Para hacer el calculo de estas variables basta con hacer algunos casos a mano y encontrar un patron que relacione a la variable `N`.
 
