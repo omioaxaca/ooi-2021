@@ -2,12 +2,41 @@
 
 ## Problema A - Lada
 
+**Descripción**
+
+Nos daran una serie de ladas telefónicas y debemos imprimir el lugar al que pertenece.
+
+**Solución**
+
+El problema no tiene mayor dificultad. Usamos condicionales IF para saber que lugar debemos
+imprimir.
+
+[Link al codigo](./A.%20Lada/main.cpp)
+
 ## Problema B - Encuentra el mayor
+**Descripción**
+Dada una serie de números, tenemos que encontrar cuál es el mayor.
+
+**Solución**
+
+El primer entero en los datos de entrada nos indica cuántos números son en total.
+El primer conflicto que nos encontramos es que el problema no describe el rango de los números
+y por lo tanto debemos encontrar una buena forma de incializar nuestra variable en donde
+almacenaremos el número más grande. (Aunque parece que son enteros positivos).
+
+Por ejemplo, ¿Qué pasa si inicializamos nuestro número mayor con cero y los datos son todos enteros
+negativos? Si realizamos las comparaciones al final tendremos que el mayor es cero, pero es
+incorrecto puesto que el mayor es alguno de los números negativos de la entrada.
+
+Por ello, una buena inicialización es leer el primer número de la lista y usarlo como mayor.
+Posteriormete podemos leer los números restantes y realizar las comparaciones correspondientes.
+
+[Link al codigo](./B.%20Encuentra%20el%20mayor/main.cpp)
 
 ## Problema C - Herencia
 
 **Descripción**
-Enunciado clave: 
+Enunciado clave:
 >Si las monedas no pueden ser divididas en `N` partes idénticas, entonces
 las partes fueron divididas en lo más cercano posible a que fueran idénticas: cada parte
 difiere de la otra por una moneda, a lo mucho. En ese caso, la hija indica que tomo una
@@ -95,8 +124,8 @@ El problema consiste en dado 3 numeros encontrar el mayor de los 3
 
 **Solución**
 
-La solución al problema es comparar los 3 numeros 
-`a` > `b` y `a` > `c`  => `a` es mayor 
+La solución al problema es comparar los 3 numeros
+`a` > `b` y `a` > `c`  => `a` es mayor
 `b` > `a` y `b` > `c` => `b` es mayor
 si no `c` es mayor
 
@@ -113,7 +142,7 @@ El problema consiste en dado un numero entero `a` escribir todos los numeros men
 
 - hay que primero encontrar los numeros que si pertenecen a la sucesion
 - debemos guardar el valor anterior de la suma así como el nuevo valor de la suma
-- usamos estos 2 valores como rango para  imprimir  los valores que no se encuentran en la sucesion simpre y cuando el valor sea menor al que nos indicaron 
+- usamos estos 2 valores como rango para  imprimir  los valores que no se encuentran en la sucesion simpre y cuando el valor sea menor al que nos indicaron
 
 [Link al código](./H.%20Numeros%20NO%20Fibonacci/main.cpp)
 
@@ -121,7 +150,7 @@ El problema consiste en dado un numero entero `a` escribir todos los numeros men
 
 **Descripción**: https://omegaup.com/arena/problem/DRMIGTriangulo/
 
-El problema consiste en determinar si es posible o no, construir un triangulo dadas las longitudes de sus 3 lados. 
+El problema consiste en determinar si es posible o no, construir un triangulo dadas las longitudes de sus 3 lados.
 Nos van a dar 3 enteros que son el tamaño de cada uno de los lados de nuestro supuesto triangulo que tenemos que validar si es posible o no crear.
 Tenemos que devolver SI o NO respectivamente si es posible crear dicho triangulo.
 Observar que nos dan en la entrada numeros decimales, por lo que pueden ser enteros o con punto flotante por lo que hay que asegurarnos que las variables que ocupemos puedan soportar numeros con punto decimal (float, double).
