@@ -338,7 +338,9 @@ cout << total // 36
 ```
 
 
-NOTA: No se proporciona el código de solución a este problema, dado que se deja como ejercicion al lector.
+[Link al código](./N.%20Cubote/main.cpp)
+
+
 
 ## Problema O - Playeras de Navidad
 
