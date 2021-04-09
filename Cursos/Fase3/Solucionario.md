@@ -289,16 +289,23 @@ Posteriormente, se deben calcular la cantidad de cubos que habra en las esquinas
 Nota que `cubosEnEsquinasSuperiores` siempre sera `4` para todos los cubotes con `N > 1`.
 Observa la siguiente imagen, en donde la sombra roja representa los cubos en las esquinas superiores, mientras que la verde representa las aristas.
 
+```c++
+cubosEnEsquinasSuperiores = 4;
+```
+
 <img src="./N.%20Cubote/cubote3.png" width="300">
 
 Para hacer el calculo de estas variables basta con hacer algunos casos a mano y encontrar un patron que relacione a la variable `N`.
 
 Tip: Nota que empezando por el nivel del cubote que toca la mesa, existen 4 cubos en las aristas y este patron se repite excepto en el nivel superior.
 
+```c++
+cubosEnAristas = (N-2) * 8 + 4;
+```
+
 La ultima variable que queda por calcular es `cubosConUnaCara`, la cual se refiere a aquellos cubos que no son ni aristas ni esquinas. Esta es simple:
 ```c++
-cubosTotales = N * N * N;
-cubosConUnaCara = cubosTotales - (cubosEnEsquinasSuperiores + cubosEnAristas);
+cubosConUnaCara = (N-2) * (N-2) * 5 + (N-2) * 4;
 ```
 
 Finalmente, la suma total de las caras visibles seria:
