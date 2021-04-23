@@ -21,7 +21,7 @@ int main() {
   cout << vector3[0] << endl;
 
   int v1 [3] = {1, 2, 3};
-  float v2 [3] = {4.34, 5.90, 9.09};
+  double v2 [3] = {4.34, 5.90, 9.09};
   string v3 [3] = {"Hola", "Mundo", "Adios"};
 
   cout << v1[1] << endl;
@@ -42,7 +42,7 @@ int main() {
   int sumaArreglo = 0;
   for(int i = 0; i < 10 ; i++) {
     cout << vector1[i] << " " ;
-    sumaArreglo += vector1[i];
+    sumaArreglo += vector1[i]; // sumaArreglo = sumaArreglo + vector1[i]
   }
 
   cout << "suma de vector "  << sumaArreglo << endl;
@@ -57,11 +57,15 @@ int main() {
   cout << endl;
 
   //obtener el tamaño del vectro
-  int tamano = sizeof vector1 / sizeof 1;
+  int tamano = sizeof vector1 / sizeof(int);
 
-  cout << "tamño = "<< tamano << endl;
+  cout << "tamaño = "<< tamano << endl;
 
   int suma = v1[0] + vector1[4];
   cout << suma << endl;
 
+
+ cout << "tamaño de vector double " << (sizeof v2 / sizeof(double)) << endl;
+  cout << "sizeof  " << sizeof 1 << endl;
+  cout << "sizeof vector1 " << sizeof vector1 << endl;
 }
