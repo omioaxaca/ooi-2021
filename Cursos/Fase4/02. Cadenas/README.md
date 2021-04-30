@@ -9,8 +9,8 @@ Las cadenas son el conjunto de caracteres que se utilizan para representar palab
 Podemos ver a las cadenas como vectores del tipo char. Solo que C++ tiene una clase especial llamada “string” para manipular este tipo de información.
 
 ## Problemas vistos en clase clase
-* [El maestro Toño (Palabras)](elmaestrotono.cpp)
-* [Sopa de consonantes, vocales y numeros](sopa.cpp)
+* [El maestro Toño (Codigo)](elmaestrotono.cpp) | [OmegaUp](https://omegaup.com/arena/problem/El-maestro-Tono-Palabras/) 
+* [Sopa de consonantes, vocales y numeros (Codigo)](sopa.cpp) | [OmegaUp](https://omegaup.com/arena/problem/Sopa-consonantes-vocales-y-num/#problems) 
 
 ## Código de la teoría de clase
 ```c++
