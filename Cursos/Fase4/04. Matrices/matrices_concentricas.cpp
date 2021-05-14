@@ -50,7 +50,7 @@ int main() {
             esConcentrica = false;
         }
         // Verificar la fila inferior
-        if (!verificar_fila(valorEsperado, n - fila - 1, diff, (n - 1) - diff)) {
+        if (!verificar_fila(valorEsperado, (n - 1) - diff, diff, (n - 1) - diff)) {
             esConcentrica = false;
         }
         valorEsperado++; 
@@ -65,7 +65,7 @@ int main() {
             esConcentrica = false;
         }
         // Verificar la columna inferior
-        if (!verificar_columna(valorEsperado, n - columna - 1, diff, (n - 1) - diff)) {
+        if (!verificar_columna(valorEsperado, (n - 1) - diff, diff, (n - 1) - diff)) {
             esConcentrica = false;
         }
         valorEsperado++;
