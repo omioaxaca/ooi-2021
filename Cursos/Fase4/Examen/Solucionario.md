@@ -60,6 +60,98 @@ Link a la solución: [Codigo](B.%20Teclas%20del%20Nokia/teclasNokia.cpp)
 
 ## C. Moscas
 
+Este problema es muy retador, el más complicado del exámen ya que require de un buen análisis del problema y creatividad para implementar la solución.
+
+Primero que nada, lo que se nos pide es identificar los rangos en que se alcanzó la mayor población de moscas, es decir cuando había más moscas vivas.
+
+Imaginemos que se tienen 3 moscas, con los siguientes rangos de vida:
+
+A: 2 - 5
+B: 4 - 7
+C: 3 - 6
+
+Observa la siguiente imagen, en donde se representa una linea de tiempo y las vidas de cada mosca.
+
+<img src="./C.%20Moscas/moscas1.png" width="400">
+
+Ahora observa en esta otra imagen, como se han contado la cantidad de moscas vivas durante el tiempo (color naranja). Asi mismo, observa que se ha marcado en azul el rango donde se encontró la mayor población de moscas equivalente a 3 moscas del tiempo 4 al 5.
+
+<img src="./C.%20Moscas/moscas2.png" width="400">
+
+### Solución A
+
+Podemos utilizar un vector para marcar el periodo de vida de cada mosca, similar a lo que hicimos en las imágenes. Es decir, si una mosca nace en el tiempo `t_n` y muere en `t_m`, podriamos hacer lo siguiente:
+
+```c++
+vector<int> moscas_vivas_en_tiempo(60001); // El problema dice que el tiempo maximo es de 0 hasta 60,000
+
+// Aqui iria la parte de leer los datos
+
+// Para esta mosca, marcar su tiempo de vida
+for (int i = t_n; i < t_m; ++i) {
+  moscas_vivas_en_tiempo[i]++; // Incrementar la cantidad de moscar vivas en el tiempo i
+}
+```
+
+Una vez que se tiene el vector marcado, se puede recorrer para encontrar el valor maximo.
+```c++
+int maximo = 0;
+for (int i = 1; i <= 60000; ++i) {
+  if (moscas_vivas_en_tiempo[i] > maximo) {
+    maximo = moscas_vivas_en_tiempo[i];
+  }
+}
+```
+
+Finalmente, tenemos que buscar los rangos en que se encuentra el valor maximo
+
+```c++
+for (int i = 1; i <= 60000; ++i) {
+  int inicio_rango;
+  int fin_rango;
+  if (moscas_vivas_en_tiempo[i] == maximo) {
+    inicio_rango = i; // Aqui inicia el rango
+    // Incrementar el valor de i mientras sea igual al maximo
+    while (i <= 60000 && moscas_vivas_en_tiempo[i] == maximo) {
+      i++;
+    }
+    // Ahora i tiene el valor del final del rango
+    fin_rango = i;
+    // Imprimir el rango
+  }
+}
+```
+
+[Código](C.%20Moscas/moscasA.cpp)
+
+Esta solución es correcta, sin embargo fallaría al ejecutarse dentro del tiempo establecido ya que puede haber hasta 20,000 moscas y en el caso de que todas tuvieran un rango de vida de 1 hasta 60,000. Entonces recorreriamos 20,000 veces el vector completo de 60,000 posiciones, lo cual equivale a 1,200,000,000 operaciones.
+
+Dado que el tiempo del problema es de 1 segundo, debemos asumir que podemos realizar a lo mas 100,000,000 operaciones. Por lo tanto, este algoritmo fallaría con TLE. Nota que este tiempo es subjetivo a las capacidades de cómputo del juez Omegaup.
+
+## Solución B
+
+Podemos optimizar la solución anterior si evitamos marcar por completo todo el rango de vida de las moscas. En su lugar, podemos usar 3 vectores. Uno que nos indique el tiempo de nacimiento de cada mosca. Mientras que otro indique el tiempo de la muerte de cada mosca. Finalmente, tendriamos el arreglo de tiempos (similar a la solucion anterior), pero esta vez lo llenaremos de una forma distinta.
+
+Para contar la cantidad de moscas vivas, procederemos a recorrer el arreglo de tiempo de nacimiento e incrementaremos un contador cada que encontremos un nuevo tiempo de inicio y lo disminuiremos de acuerdo al arreglo de tiempos de muerte. El valor del contador lo guardaremos en el vector de moscas vivas durante el tiempo.
+
+```c++
+vector<int> nacimientos(60001);
+vector<int> muertes(60001);
+vector<int> moscas_vivas_en_tiempo(60001);
+
+// Aqui iria la parte para leer datos y llenar los arreglos
+
+int contador = 0;
+for (int i = 1; i <= 60000; ++i) {
+  contador += nacimientos[i]; // El contador incrementa de acuerdo a la cantidad de moscas que nacieron en el tiempo i
+  contador -= muertes[i];     // El contador disminuye de acuerdo a la cantidad de moscas que murieron en el tiempo i
+  moscas_vivas_en_tiempo[i] = contador; // La cantidad de moscas vivas en el tiempo i equivale al valor del contador
+}
+```
+
+El resto de los pasos para encontrar los rangos máximos es igual a la solución anterior.
+
+[Código](C.%20Moscas/moscasB.cpp)
 
 
 ## D. Acomoda el numero
