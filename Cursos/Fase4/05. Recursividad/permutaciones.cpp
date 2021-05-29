@@ -2,13 +2,16 @@
 
 using namespace std;
 
+void print_vector(vector<int> &vec) {
+    for (int i = 0; i < vec.size(); i++) {
+        cout << vec[i] << " ";
+    }
+    cout << "\n";
+}
+
 void permutacion(vector<int> &nums, vector<bool> &states, vector<int> &sol, int take=0) {
     if (take == nums.size()) {
-        for (int i = 0; i < sol.size(); i++) {
-            cout << sol[i] << " ";
-        }
-        cout << "\n";
-
+        print_vector(sol);
         return;
     }
 
@@ -25,7 +28,7 @@ void permutacion(vector<int> &nums, vector<bool> &states, vector<int> &sol, int 
 
 
 int main () {
-    vector<int> nums = {1,2,3, 4};
+    vector<int> nums = {1, 2, 3};
     vector<bool> states(nums.size(), false);
     vector<int> sol(nums.size(), 0);
 
