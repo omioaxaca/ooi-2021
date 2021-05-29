@@ -60,4 +60,20 @@ Link a la solución: [Codigo](B.%20Teclas%20del%20Nokia/teclasNokia.cpp)
 
 ## C. Moscas
 
+
+
 ## D. Acomoda el numero
+
+Este es el problema más fácil del exámen, se nos pide que encontremos la posicion de cierto elemento dentro del arreglo ordenado de datos.
+Muchos pueden irse por la solución de ordenar el arreglo y luego buscar a ese elemento, sin embargo lo más simple es contar la cantidad de elementos menores al número de interés.
+
+Debido a la gran cantidad de datos, este problema necesita una optimización para leer datos cuando se usa `cin`.
+Para eso se requiere incluir las siguientes líneas al principio de la función `main`
+
+```c++
+ios::sync_with_stdio(false); cin.tie(0);
+```
+
+Para más información, consulta https://blog.omegaup.com/trucos-cool/
+
+Link a solución: [Código](D.%20Acomoda%20el%20numero/acomoda.cpp)
