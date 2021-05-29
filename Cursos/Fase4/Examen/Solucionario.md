@@ -2,6 +2,10 @@
 
 - Link: https://omegaup.com/arena/ooi-2021-e2/#problems
 
+## Temas:
+ - Vectores
+ - Cadenas de caracteres (strings)
+
 ## A. Potencias de 2
 El problema es simple de entender, solo se requiere elevar `2` a la `n` potencia. El mayor desafío es el tamaño máximo de `n`, ya que puede ser hasta 265, lo cual definitivamente no cabe en un `int` o `long long int`.
 
@@ -40,8 +44,20 @@ x       2
    
 ```
 
-Es importante considerar el acarreo. Así se conoce al numero que se pasa al siguiente lugar decimal, es decir al multiplicar 5 x 2 el resultado es 10, sin embargo se escribe el 0 y decimos que llevamos 1. Este 1 es el acarreo. Otro ejemplo, 6 x 7 = 42 se escribe el 2 y llevamos 4.
+Es importante considerar el acarreo. El cual es el numero que se pasa al siguiente lugar decimal, es decir al multiplicar 5 x 2 el resultado es 10, sin embargo se escribe el 0 en las unidades, y decimos que llevamos 1 para las decenas. Este 1 es el acarreo. Otro ejemplo, 6 x 7 = 42 se escribe el 2 y llevamos 4.
+
+Link a la solución: [Codigo](A.%20Potencias%20de%20dos/potencias.cpp)
 
 ## B. Teclas del Nokia
+
+Este tipo de problemas se conocen como de implementación, ya que no se requiere ningún análisis para comprender lo que se pide. Simplemente se debe implementar el código.
+
+La implementación puede ser tediosa, aquí es donde entra la habilidad del programador para diseñar y crear un código limpio y bien estructurado, de tal forma que se simplifique el trabajo de escribir una gran cantidad de código.
+
+Existen varias soluciones, a continuacion se presentan algunas:
+
+Link a la solución: [Codigo](B.%20Teclas%20del%20Nokia/teclasNokia.cpp)
+
 ## C. Moscas
+
 ## D. Acomoda el numero
