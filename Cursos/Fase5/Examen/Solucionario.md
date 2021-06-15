@@ -1,4 +1,4 @@
-# Soluciones al 2do examen eliminatorio de la OOI 2021
+# Soluciones al 3er examen eliminatorio de la OOI 2021
 
 - Link: https://omegaup.com/arena/ooi-2021-e3/#problems
 
