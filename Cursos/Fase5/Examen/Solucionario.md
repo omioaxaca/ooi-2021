@@ -62,6 +62,20 @@ Link al codigo: [Click](./B.%20Recursion%20con%20memorizacion/memorizacion.cpp)
 
 ## C. Coeficiente binomial recursivo
 
+Este es uno de los problemas mas sencillos del concurso, consiste simplemente en evaluar la función recursiva. Nota que puede ser un poco difícil de comprender la nomenclatura usada si no se es familiar con matemáticas y combinatoria, sin embargo, esto es intencional ya que en ocasiones en la OMI se presentan términos desconocidos y es el propósito que el alumno analice e intuya el significado.
+
+Dicho lo anterior, la función queda:
+
+- Estado: `n`, `k`
+- Casos base:
+   - El resultado es `1` cuando `k = 0` o `n = k`.
+- Paso recursivo: El resultado es `f(n-1, k) +  f(n-1, k-1)`.
+
+
+Para contar las llamadas totales, simplemente usamos una variable global (o pasamos alguna por referencia) y la incrementamos cada que entremos a la funcion.
+
+Link al codigo: [Click](./C.%20Coeficiente%20binomial%20recursivo/coeficiente.cpp)
+
 ## D. Submatrices
 
 El problema nos pide que encontremos todas las submatrices contenidas en la matriz grande. Para hacerlo simplemente tenemos que tomar la matriz pequeña y buscarla por toda la matriz grande, empezando de izquierda a derecha y de arriba a abajo.
