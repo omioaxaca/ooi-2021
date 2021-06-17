@@ -24,6 +24,42 @@ Link al codigo: [Click](./A.%20Proyectiles/proyectiles.cpp)
 
 ## B. Recursión con memorización
 
+Este problema plantea una función recursiva, la cuál debe evaluarse tal y como se especifica. Sin embargo, es necesario considerar que la relación recursiva presenta traslapes, es decir, un mismo estado se puede evaluar más de una vez.
+
+Para evitar calcular el mismo estado durante varias ocasiones, podemos memorizar o guardar los resultados ya obtenidos.
+
+Dado que el problema presenta 3 variables en el estado, necesitamos una arreglo de 3 dimensiones, para así poder almacenar todas las combinaciones.
+
+Planteamiento recursivo:
+
+- Estado: `a`, `b`, `c`
+- Casos base:
+   - Si el minimo entre `a`, `b` y `c` es menor o igual que `3`, entonces el resultado es `a + 2b + 3c`.
+   - Si el minimo entre `a`, `b` y `c` es mayor que `3` y `a + b + c = 100` entonces el resultado es `0`.
+- Paso recursivo: El resultado es `f(a - 1, b - 1, c - 1) + f(a, b - 3, c - 3) + f(a / 2, b, c)`.
+
+El arreglo de memoria debe ser declarado para almacenar los valores extremos de las variables, en este caso al menos 100 localidades para cada una.
+
+```c++
+unsigned long long int memoria[101][101][101];
+```
+
+Lo que la combinacion de indices guarda, es el resultado de evaluar la funcion. Por ejemplo: `memoria[3][7][2]` guarda el resultado de evaluar `f(3, 7, 2)`.
+
+Nota que el tipo de dato que se usa es `unsigned long long int`, ya que el problema nos asegura que puede haber valores tan grandes como 2<sup>64</sup>.
+
+También, se nos pide que reportemos el resultado módulado a 2<sup>64</sup>. Aquí pasa algo interesante, podríamos usar aritmética modular en cada una de las operaciones, sin embargo, al ser el módulo 2<sup>64</sup> y el tipo de dato `unsigned long long int`, el resultado se automodula, ya que cuando la variable se desborda al llegar al valor máximo, vuelve a ser 0.
+
+Por último, se nos pide contar la cantidad de llamadas recursivas únicas, esto se consigue de forma fácil al incrementar un contador cada vez que se actualiza el valor de la memoria.
+
+Un dato adicional: Nuestra memoria debe iniciar en un valor inválido, para que de esta forma podamos averiguar si ya se consultó ese estado o no. Dado que el rango de valores válidos está entre `0` y 2<sup>64</sup>, entonces no nos queda ningun valor inválido. Para solucionar esto, utilizamos otra memoria que se inicializa a `false`, y se actualiza a `true` cada que se ha visitado un estado.
+
+```c++
+bool estadosUsados[101][101][101] = {false};
+```
+
+Link al codigo: [Click](./B.%20Recursion%20con%20memorizacion/memorizacion.cpp)
+
 ## C. Coeficiente binomial recursivo
 
 ## D. Submatrices
