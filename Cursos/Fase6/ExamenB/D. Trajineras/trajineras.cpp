@@ -1,3 +1,8 @@
+// Trajineras
+// https://omegaup.com/arena/problem/Trajineras/#problems
+// Solucion: Probar con todos los posibles tamanios de grupos, pero usar busqueda binaria
+// para hacerlo de forma optima. Tambien, utilizar la estrategia de precalcular las sumatorias
+// de los pesos para evitar hacerlo cada vez.
 #include <bits/stdc++.h>
 
 using namespace std;
