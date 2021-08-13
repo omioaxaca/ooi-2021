@@ -98,11 +98,9 @@ int bfs(Coord start, int rows, int cols) {
             found_time = min(found_time, time + min_time);
             found_parent_time = time;
         }
-        if (FIELD[pi][pj] != '#') { // No es pared
-            if (time + min_time < STEPS_MAP[pi][pj]) { // Lo visitamos que caso que lleguemos antes con un salto
-                queue.push(make_pair(time + min_time, make_pair(pi, pj)));
-                STEPS_MAP[pi][pj] = time + min_time;
-            }
+        if (time + min_time < STEPS_MAP[pi][pj]) { // Lo visitamos que caso que lleguemos antes con un salto
+            queue.push(make_pair(time + min_time, make_pair(pi, pj)));
+            STEPS_MAP[pi][pj] = time + min_time;
         }
 
         // Move to upper port
@@ -114,11 +112,9 @@ int bfs(Coord start, int rows, int cols) {
             found_time = min(found_time, time + min_time);
             found_parent_time = time;
         }
-        if (FIELD[pi][pj] != '#') {
-            if (time + min_time < STEPS_MAP[pi][pj]) {
-                queue.push(make_pair(time + min_time, make_pair(pi, pj)));
-                STEPS_MAP[pi][pj] = time + min_time;
-            }
+        if (time + min_time < STEPS_MAP[pi][pj]) {
+            queue.push(make_pair(time + min_time, make_pair(pi, pj)));
+            STEPS_MAP[pi][pj] = time + min_time;
         }
 
         // Move to right port
@@ -130,11 +126,9 @@ int bfs(Coord start, int rows, int cols) {
             found_time = min(found_time, time + min_time);
             found_parent_time = time;
         }
-        if (FIELD[pi][pj] != '#') {
-            if (time + min_time < STEPS_MAP[pi][pj]) {
-                queue.push(make_pair(time + min_time, make_pair(pi, pj)));
-                STEPS_MAP[pi][pj] = time + min_time;
-            }
+        if (time + min_time < STEPS_MAP[pi][pj]) {
+            queue.push(make_pair(time + min_time, make_pair(pi, pj)));
+            STEPS_MAP[pi][pj] = time + min_time;
         }
 
         // Move to left port
@@ -146,11 +140,9 @@ int bfs(Coord start, int rows, int cols) {
             found_time = min(found_time, time + min_time);
             found_parent_time = time;
         }
-        if (FIELD[pi][pj] != '#') {
-            if (time + min_time < STEPS_MAP[pi][pj]) {
-                queue.push(make_pair(time + min_time, make_pair(pi, pj)));
-                STEPS_MAP[pi][pj] = time + min_time;
-            }
+        if (time + min_time < STEPS_MAP[pi][pj]) {
+            queue.push(make_pair(time + min_time, make_pair(pi, pj)));
+            STEPS_MAP[pi][pj] = time + min_time;
         }
     }
 
