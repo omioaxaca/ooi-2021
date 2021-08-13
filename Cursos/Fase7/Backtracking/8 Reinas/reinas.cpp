@@ -1,3 +1,13 @@
+/*
+  Link: https://omegaup.com/arena/problem/8Reinas/
+  Solucion: Backtracking
+  probar todas las posibles posiciones para cada reina y conforma vayamos encontrando una 
+  vamos añadiendo las posiciones a una lista y luego las vamos añadiendo a la solucion
+  y si no hay solucion se regresa un paso hacia atras.
+
+  Ejecutar: g++ -std=c++11 reinas.cpp -o reinas && ./reinas < reinas.in > reinas.out
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
