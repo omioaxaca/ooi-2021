@@ -5,6 +5,10 @@
   vamos añadiendo las posiciones a una lista y luego las vamos añadiendo a la solucion
   y si no hay solucion se regresa un paso hacia atras.
 
+  Optimizacion:
+  - Buscar una reina por cada fila del tablero.
+
+  
   Ejecutar: g++ -std=c++11 reinas.cpp -o reinas && ./reinas < reinas.in > reinas.out
 */
 
@@ -38,30 +42,25 @@ bool validarTablero(vector<coord> &reinas, coord &nuevaReina) {
 
 // Funcion recursiva que busca la solucion de las reinas. y retorna las soluciones encontradas
 // a partir de ese nodo.
-int busqueda(int reinaActual, int reinasABuscar, Matriz &ocupado, vector<coord> &solucion) {
+int busqueda(int filaActual, Matriz &ocupado, vector<coord> &solucion) {
 
-  // si la reina que debemos de buscar es la novena, quiere decir que ya encontramos 8 anteriores.
-  if (reinaActual > reinasABuscar) { // hemos encontrado las reinas restantes.
+  // si estamos en la fila 8, quiere decir que ya encontramos 8 reinas.
+  if (filaActual == 8) { // hemos encontrado las reinas restantes.
     return 1;
   }
 
   int soluciones = 0;
-  // Generar los vecinos de busqueda del nodo, o el siguiente espacio de busqueda.
-  for (int i=0; i<8; i++) {
-    for (int j=0; j<8; j++) {
-      coord nuevaReina = {i, j};
-      if (ocupado[i][j] == 0 && validarTablero(solucion, nuevaReina)) { // si el espacio esta libre y es una solución.
-        // agregar al candidato a la solución.
-        solucion.push_back(nuevaReina);
-        ocupado[i][j] = 1; // marcar como ocupado para que en la recursión no escogamos la misma reina y ciclarnos.
-
-        // recursivamente seguir buscando mas reinas.
-        soluciones += busqueda(reinaActual+1, reinasABuscar, ocupado, solucion);
-
-        // Quitar la ultima reina de la solución.
-        ocupado[i][j] = 0; // marcar como libre.
-        solucion.pop_back();
-      }
+  // Generar los vecinos de busqueda del nodo, o el siguiente espacio de busqueda
+  // recorrer las columnas en la fila actual.
+  for (int j=0; j<8; j++) {
+    coord nuevaReina = {filaActual, j};
+    if (ocupado[filaActual][j] == 0 && validarTablero(solucion, nuevaReina)) { // si el espacio esta libre y es una solución.
+      // agregar al candidato a la solución.
+      solucion.push_back(nuevaReina);
+      // recursivamente seguir buscando mas reinas.
+      soluciones += busqueda(filaActual+1, ocupado, solucion);
+      // Quitar la ultima reina de la solución.
+      solucion.pop_back();
     }
   }
 
@@ -85,7 +84,7 @@ int main() {
   // EJECUCION:
   // Buscar 8 reinas.
   vector<coord> solucion;
-  int soluciones = busqueda(1, 8, ocupado, solucion);
+  int soluciones = busqueda(0, ocupado, solucion);
 
   // IMPRIMIR RESULTADO:
   cout<<soluciones<<endl;
