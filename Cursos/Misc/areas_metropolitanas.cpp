@@ -44,7 +44,10 @@ i64 obtenerSumaDeRegion(int x1, int y1, int x2, int y2, const Matriz& matriz) {
     return matriz[x2][y2] - matriz[x1 - 1][y2]  - matriz[x2][y1 - 1] + matriz[x1 - 1][y1 - 1];
 }
 
-bool existeAreaSuperiorALimite(int tiempo, i64 limite, int tamRegion, Matriz ciudad, const vector<Migracion>& migraciones) {
+// Validar si en el tiempo indicado la cantidad de poblacion en alguna region excede el limite.
+// NOTA: Es importante ver que aqui la matriz de ciudad se pasa por valor. Es decir, se crea una
+//       copia, la cual es modificada para simular las migraciones hasta el tiempo especificado.
+bool existePoblacionSuperiorALimite(int tiempo, i64 limite, int tamRegion, Matriz ciudad, const vector<Migracion>& migraciones) {
     // Simular todas las migraciones hasta el tiempo indicado.
     for (auto& migracion : migraciones) {
         if (migracion.tiempo > tiempo) {
@@ -74,7 +77,7 @@ int buscarTiempoParaSuperarLimite(i64 limite, int tamRegion, const Matriz& ciuda
     int fin = numMigraciones > 0 ? migraciones[numMigraciones - 1].tiempo : 0;
     while (inicio < fin) {
         int mitad = inicio + (fin - inicio) / 2;
-        if (existeAreaSuperiorALimite(mitad, limite, tamRegion, ciudad, migraciones)) {
+        if (existePoblacionSuperiorALimite(mitad, limite, tamRegion, ciudad, migraciones)) {
             fin = mitad;
         }
         else {
@@ -84,7 +87,7 @@ int buscarTiempoParaSuperarLimite(i64 limite, int tamRegion, const Matriz& ciuda
 
     // Verificar si el valor encontrado corresponde a un area superior, de lo contrario
     // no existe ninguna.
-    if (existeAreaSuperiorALimite(inicio, limite, tamRegion, ciudad, migraciones)) {
+    if (existePoblacionSuperiorALimite(inicio, limite, tamRegion, ciudad, migraciones)) {
         return inicio;
     }
     return -1;
