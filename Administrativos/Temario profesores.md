@@ -35,6 +35,8 @@ Si no se tiene experiencia previa escribiendo programas para programación compe
 - Usar Omegaup para evaluar todos los ejercicios. Más información acerca de las ventajas aquí https://omegaup.com/course/Curso-OMI/assignment/COMI-intro/#problems/COMI-Objetivo 
 - Introducción a plataforma Omegaup| https://omegaup.com/course/Curso-OMI/assignment/COMI-intro/#problems 
 
+**Acerca de programación dinámica**: A pesar de que el tema de programación dinámica tiene su propia sección y es del apartado avanzado, se sugiere revisar este concepto y algunas técnicas desde el principio. Pues varios de los problemas requieren del uso de esta técnica.
+
 ## Parte 2: Algoritmos y solución de problemas con programación
 
 ### Estructuras de datos simples
